@@ -2,6 +2,12 @@
 
 Application developed for the code challenge proposed by TRANZACT.
 
+## Table of contents
+
+- [Challenge](#challenge)
+- [Technologies](#technologies)
+- [Usage](#usage)
+
 ## Challenge
 
 The Wikimedia Foundation provides all pageviews for Wikipedia site since 2015 in machine-readable format. The pageviews can be downloaded in gzip format and are aggregated per hour per page. Each hourly dump is approximately 50MB in gzipped text file and is somewhere between 100MB and 250MB in size unzipped.
