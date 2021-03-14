@@ -54,7 +54,7 @@ for x in range(1, limit + 1):
     ld = utils.parse_landom(max_landom.domain_code)
 
     landom.append(
-        f'{utils.parsePeriod(dt.hour)} {ld.language} {ld.domain} {max_landom.view_count}')
+        f'{utils.parsePeriod(dt.hour):<20}{ld.language:<20}{ld.domain:<20}{max_landom.view_count:<20}')
 
     index = ''
 
@@ -64,9 +64,13 @@ for x in range(1, limit + 1):
             index = key
 
     pagecount.append(
-        f'{utils.parsePeriod(dt.hour)} {index} {page_title[index]}')
+        f'{utils.parsePeriod(dt.hour):<20}{index:<20}{page_title[index]:<20}')
 
-landom.append('Period Language Domain ViewCount')
+prd = 'Period'
+lng = 'Language'
+dmn = 'Domain'
+vwcnt = 'ViewCount'
+landom.append(f'{prd:<20}{lng:<20}{dmn:<20}{vwcnt:<20}')
 landom.reverse()
 
 for x in landom:
@@ -74,7 +78,8 @@ for x in landom:
 
 print('\n')
 
-pagecount.append('Period Page ViewCount')
+pg = 'Page'
+pagecount.append(f'{prd:<20}{pg:<20}{vwcnt:<20}')
 pagecount.reverse()
 
 for x in pagecount:
